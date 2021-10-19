@@ -1,14 +1,29 @@
-import React from "react";
-import './cart-item.styles.scss';
+import React from 'react';
+import { connect } from 'react-redux';
 
-const CartItem = ({ item: {imageUrl, price, name, quantity } }) => (
-    <div className='cart-item'>
-        <img src={imageUrl} alt='item' />
-        <div className='item-details'>
-            <span className='name'>{name}</span>
-            <span className='price'>{quantity} x ${price}</span>
-        </div>
-    </div>
+import { toggleCartHidden } from '../../redux/cart/cart.actions';
+import { selectCartItemsCount } from '../../redux/cart/cart.selectors';
+
+import { ReactComponent as ShoppingIcon } from '../../assets/shopping-bag.svg';
+
+import './cart-icon.styles.scss';
+
+const CartIcon = ({ toggleCartHidden, itemCount }) => (
+  <div className='cart-icon' onClick={toggleCartHidden}>
+    <ShoppingIcon className='shopping-icon' />
+    <span className='item-count'>{itemCount}</span>
+  </div>
 );
 
-export default CartItem;
+const mapDispatchToProps = dispatch => ({
+  toggleCartHidden: () => dispatch(toggleCartHidden())
+});
+
+const mapStateToProps = state => ({
+  itemCount: selectCartItemsCount(state)
+});
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(CartIcon);
