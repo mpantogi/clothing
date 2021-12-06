@@ -43,3 +43,4 @@ const StripeCheckoutButton = ({ price }) => {
 };
 
 export default StripeCheckoutButton;
+
