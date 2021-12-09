@@ -1,6 +1,6 @@
 {
-  "short_name": "Crwn-clothing",
-  "name": "Crwn-clothing by Chris",
+  "short_name": "Crwn-Clothing",
+  "name": "Crwn-Clothing by Chris",
   "icons": [
     {
       "src": "favicon.ico",
@@ -13,19 +13,9 @@
       "type": "image/png"
     },
     {
-      "src": "crwn-5192x192.png",
+      "src": "crwn-192x192.png",
       "sizes": "192x192",
       "type": "image/png"
-    },
-    {
-      "src": "logo192.png",
-      "type": "image/png",
-      "sizes": "192x192"
-    },
-    {
-      "src": "logo512.png",
-      "type": "image/png",
-      "sizes": "512x512"
     }
   ],
   "start_url": ".",
