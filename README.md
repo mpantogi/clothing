@@ -46,7 +46,7 @@ $ yarn dev
 #### Follow the steps below
 
 ##### Clone your fork
-$ git clone https://github.com/francianepovoa/crwn-clothing.git
+$ git clone https://github.com/mpantogi/clothing.git
 $ cd clothing
 
 #####  Create a branch with your feature
